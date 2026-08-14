@@ -212,3 +212,4 @@ lessons/*.png
 
 # Files inside of the data/ folder
 data/**/*.ipynb
+.DS_Store

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Dev2"
+		},
+		{
+			"path": "../Dev0"
+		},
+		{
+			"path": "../Project"
+		}
+	],
+	"settings": {}
+}

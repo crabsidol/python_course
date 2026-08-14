@@ -1,0 +1,6 @@
+{
+  "name": "Liza",
+  "age": 24,
+  "city": "London",
+  "skills": ["Python", "Jupyter", "VS Code"]
+}

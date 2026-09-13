@@ -54,3 +54,60 @@ plt.show()
 - Excel experienced a significant increase in demand starting around September, surpassing both Python and Tableau by the end of the year.
 -Both Python and Tableau show relatively stable demand throughout the year with some fluctuations. but remain essential skills for data analysts.
 Power BI, while less demanded compared to the otherseshows a slight upward trend towards the year's end.
+
+## 3. How well do jobs and skills pay for Data Analysts?
+
+### Salary Analysis for Data Nerds
+
+#### Visualize Data 
+
+```python
+sns.boxplot(data=df_US_top6, x='salary_year_avg', y='job_title_short', order=job_order)
+
+ticks_x = plt.FuncFormatter(lambda x, pos: f'${int(x/1000)}K')
+plt.gca().xaxis.set_major_formatter(ticks_x)
+plt.show()
+
+```
+
+#### Results 
+
+![Salary Distribution of Data Jobs in the US](Project/images/skill_pay.png)
+*Box plot visualizing the salary distribution for the top 6 data job titles.*
+
+#### Insights
+
+- There's a significant variation in salary ranges across different job titles. Senior Data Scientist positions tend to have the highest salary $600K, indicating the high value placed on advanced data skills and experience in the industry.
+- Senior Data Engineer and Senior Data Scientist roles show a considerable number of outliers on the higher end of the salary spectrum, suggesting that exceptional skills or circumstances can lead to high pay in these roles. In contrast, Data Analyst roles demonstrate more consistency in salary, with fewer outliers.
+- The median salaries increase with the seniority and specialization of the roles. Senior roles (Senior Data Scientist, Senior Data Engineer) not only have higher median salaries but also larger differences in typical salaries, reflecting greater variance in compensation as responsibilities increase.
+
+### Highest Paid and Most Demanded skills for Data Analysts
+
+#### Visusllize data
+
+```python
+fig, ax = plt.subplots(2, 1)
+
+# Top 10 Highest Paid Skills for Data Analysts
+sns.barplot(data=df_DA_top_pay, x ='median', y=df_DA_top_pay.index, ax=ax[0], hue='median', palette='dark:b_r')
+
+# Top 10 Most In-Demand Skills for Data Anatysts
+sns.barplot(data=df_DA_skills, x ='median', y=df_DA_skills.index, ax=ax[1], hue='median', palette='light:b')
+
+plt.show()
+
+```
+
+#### Results
+
+in-demand skills for Data Analysts in the US:
+
+![The highest Paid and most In-demand skills for Data Analysts in the US](Project/images/highest_paid_and_most_in-demand_skills.png)
+*Two separate bar graphs visualising the highest paid skills and most in-demand skills for data analysts in the US.*
+
+#### Insights:
+
+- The top graph shows specialized technical skills like 'delyr', 'Bitbucket', and 'Gitlab' are associated with higher salaries, some reaching up to $200K, suggesting that advanced technical proficiency can increase earning potential.
+
+- The bottom graph highlights that foundational skills like 'Excel', 'PowerPoint', and 'SQL' are the most in-demand, even though they may not offer the highest salaries. This demonstrates the importance of these core skills for employability in data analysis roles.
+- There's a clear distinction between the skills that are highest paid and those that are most in-demand. Data analysts aiming to maximize their career potential should consider developing a diverse skill set that includes both high-paying specialized skills and widely demanded foundational skills.
